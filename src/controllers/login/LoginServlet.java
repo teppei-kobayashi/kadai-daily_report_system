@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             request.getSession().removeAttribute("flush");
         }
 
-        RequestDispatcher rd =request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");
         rd.forward(request, response);
     }
 
@@ -70,9 +70,9 @@ public class LoginServlet extends HttpServlet {
             // 社員番号とパスワードが正しいかチェックする
             try {
                 e = em.createNamedQuery("checkLoginCodeAndPassword", Employee.class)
-                        .setParameter("code", code)
-                        .setParameter("pass", password)
-                        .getSingleResult();
+                      .setParameter("code", code)
+                      .setParameter("pass", password)
+                      .getSingleResult();
             } catch(NoResultException ex) {}
 
             em.close();
@@ -91,7 +91,7 @@ public class LoginServlet extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");
             rd.forward(request, response);
         } else {
-            //認証できたらログイン状態にしてトップページへリダイレクト
+            // 認証できたらログイン状態にしてトップページへリダイレクト
             request.getSession().setAttribute("login_employee", e);
 
             request.getSession().setAttribute("flush", "ログインしました。");
