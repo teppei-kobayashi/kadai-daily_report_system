@@ -51,6 +51,11 @@ public class ReportsCreateServlet extends HttpServlet {
             }
             r.setReport_date(report_date);
 
+            r.setWork_time_hour(Integer.valueOf(request.getParameter("work_time_hour")));
+            r.setWork_time_min(Integer.valueOf(request.getParameter("work_time_min")));
+            r.setLeave_time_hour(Integer.valueOf(request.getParameter("leave_time_hour")));
+            r.setLeave_time_min(Integer.valueOf(request.getParameter("leave_time_min")));
+
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
 

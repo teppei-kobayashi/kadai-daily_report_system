@@ -18,6 +18,14 @@
                             <td><fmt:formatDate value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
                         </tr>
                         <tr>
+                            <th>出勤時間</th>
+                            <td><fmt:formatNumber value="${report.work_time_hour}" minIntegerDigits="2" />:<fmt:formatNumber value="${report.work_time_min}" minIntegerDigits="2" /></td>
+                        </tr>
+                        <tr>
+                            <th>退勤時間</th>
+                            <td><fmt:formatNumber value="${report.leave_time_hour}" minIntegerDigits="2" />:<fmt:formatNumber value="${report.leave_time_min}" minIntegerDigits="2" /></td>
+                        </tr>
+                        <tr>
                             <th>内容</th>
                             <td>
                                 <pre><c:out value="${report.content}" /></pre>

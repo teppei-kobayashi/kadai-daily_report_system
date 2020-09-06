@@ -61,6 +61,20 @@ public class Report {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
+    @Column(name = "work_time_hour")
+    private Integer work_time_hour;
+
+    @Column(name = "work_time_min")
+    private Integer work_time_min;
+
+    @Column(name = "leave_time_hour")
+    private Integer leave_time_hour;
+
+    @Column(name = "leave_time_min")
+    private Integer leave_time_min;
+
+
+
     public Integer getId() {
         return id;
     }
@@ -116,4 +130,37 @@ public class Report {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+    public Integer getWork_time_hour() {
+        return work_time_hour;
+    }
+
+    public void setWork_time_hour(Integer work_time_hour) {
+        this.work_time_hour = work_time_hour;
+    }
+
+    public Integer getWork_time_min() {
+        return work_time_min;
+    }
+
+    public void setWork_time_min(Integer work_time_min) {
+        this.work_time_min = work_time_min;
+    }
+
+    public Integer getLeave_time_hour() {
+        return leave_time_hour;
+    }
+
+    public void setLeave_time_hour(Integer leave_time_hour) {
+        this.leave_time_hour = leave_time_hour;
+    }
+
+    public Integer getLeave_time_min() {
+        return leave_time_min;
+    }
+
+    public void setLeave_time_min(Integer leave_time_min) {
+        this.leave_time_min = leave_time_min;
+    }
+
 }
